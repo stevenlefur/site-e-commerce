@@ -1,0 +1,44 @@
+html{
+    margin: 0;
+}
+#wrap{
+    display: grid;
+    grid-template-areas: "entete entete entete entete entete entete"
+    "navbar navbar navbar navbar navbar navbar"
+    "filter filter body body body body"
+    "filter filter body body body body"
+    "filter filter body body body body"
+    "bas bas bas bas bas bas";
+}
+#suit{
+    grid-area : body;   
+}
+#filternav{
+    grid-area: filter;
+}
+
+.listing{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+li{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 15% 15% 40% 15% 15%;
+    align-items: center;
+    text-align: center;
+}
+li * {
+    padding-top: 10px;
+    margin: 2px;
+}
+.img{
+    object-fit: contain;
+}
+.reference{
+    font-size: 0.8em;
+}
+.price, .name{
+    font-size: 1.2em;
+}
