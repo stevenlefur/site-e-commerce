@@ -1,4 +1,4 @@
-$(document).ready(function () {
-    $("#cartModal").modal("show");
-  });
+// $(document).ready(function () {
+//     $("#cartModal").modal("show");
+//   });
   
