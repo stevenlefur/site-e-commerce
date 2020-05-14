@@ -1,0 +1,84 @@
+header.page-header {
+    background: no-repeat left/cover url(../img/plongée.jpg);
+    display: flex;
+    height: 150px;
+    min-width: 120px;
+    align-items: center;
+    color: #0079BF;
+    text-shadow: #000 0 0 .2em;
+}
+header.page-header > h1 {
+    font: bold calc(1em + 2 * (100vw - 120px) / 100) 'Dancing Script', cursive,
+        fantasy;
+    margin: 2%;
+}
+
+#maps
+{
+    border-radius: 30px;
+    margin-top: 10px;
+    float: left; 
+    width: 350px;  
+    height: 200px;
+    margin-right: 150px;
+}
+#adresse
+{
+    text-align: left;
+    border-radius: 10px;
+    width: 670px;
+    float: right; 
+    margin-right: 150px;
+    margin-top: 200px;
+}
+.text
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 100%;
+    text-transform: uppercase;
+    font-size: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 32px;
+    margin-left: 32px;
+    margin-top: 219px;
+}
+
+#text2
+{
+    
+    float: left; 
+    width: 750px;  
+    height: 500px;
+    margin-left: 220px;
+    margin-top: 200px;
+    border-radius: 10px;
+}
+
+.contener-text 
+{
+    
+    font-size: 20px;
+    width: 1834px;
+    height: 1029px;
+    background-color:RGBa(255, 255, 255, 0.6);
+    border-radius: 76px;
+    margin-left: 32px;
+    margin-top: 219px;
+}
+
+footer{
+    margin-top: -5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-size: 30px;
+    background-color: #0079BF;
+    width: 1920px;
+    height: 169px;
+}
