@@ -1,130 +1,274 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aquacommerce</title>
     <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <script src="https://kit.fontawesome.com/a6e951cb67.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a6e951cb67.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header class="page-header">
-        <h1>Aquacommerce</h1>
-    </header>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="index.html">BULLES & CO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
     
-<div id="wrap">
-    <div id="filternav">
-        <div class="pricefilter">
-            <input type="text" name="pricefilter" id="priceF">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="category.html">Categories <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">Produits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Panier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+    
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-secondary btn-number">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <a class="btn btn-success btn-sm ml-3" href="cart.html">
+                        <i class="fa fa-shopping-cart"></i> Cart
+                        <span class="badge badge-light">3</span>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div id="wrap">
+        <header class="page-header">
+            <h1>Aquacommerce</h1>
+        </header>
+        <div id="filternav">
+            <div class="pricefilter">
+                <input type="text" name="pricefilter" id="priceF">
+            </div>
+        </div>
+        <div id="suit">
+            <div class="listing">
+                <ul>
+                    <li>
+                        <div class="img">
+                            <img src="assets/img/suit/mini/seac-ciao-2.5-mm.jpg"
+                                alt="body noir avec cote rouge et bande blanche marque seac">
+                        </div>
+                        <div class="name">
+                            <p>SEAC Ciao 2.5mm <br>Homme</p>
+                        </div>
+                        <div class="reference">
+                            <p>Combinaison pour Homme Adulte de couleur noir avec une epaisseur de 2mm et fermeture
+                                eclair
+                                avant</p>
+                        </div>
+                        <div class="price">
+                            <p>44.99€</p>
+                        </div>
+                        <div class="add">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="assets/img/suit/mini/seac-ciao-2.5-mm-woman.jpg"
+                                alt="combinaison shorty noir avec bande bleue et fermeture glissiere avant">
+                        </div>
+                        <div class="name">
+                            <p>SEAC Ciao 2.5mm <br>Femme</p>
+                        </div>
+                        <div class="reference">
+                            <p>Combinaison shorty pour Femme Adulte avec une epaisseur de 2mm et une fermeture glissiere
+                                anterieure.</p>
+                        </div>
+                        <div class="price">
+                            <p>44.99€</p>
+                        </div>
+                        <div class="add">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="assets/img/suit/mini/seac-relax-2.2-mm-woman.jpg"
+                                alt="combinaison monopiece noir avec cote rose avec fermeture glissiere dorsale">
+                        </div>
+                        <div class="name">
+                            <p>SEAC Relax 2.2mm <br>Femme</p>
+                        </div>
+                        <div class="reference">
+                            <p>Combinaison monopiece pour Femme Adulte avec fermeture glissiere dorsale. Comporte
+                                genouilleres avec renforts en polyurethane</p>
+                        </div>
+                        <div class="price">
+                            <p>64.99€</p>
+                        </div>
+                        <div class="add">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="img">
+                            <img src="assets/img/suit/mini/cressi-med-x-2.5-mm.jpg"
+                                alt="Shorty monopiece noir avec bande bleue blanche et grise et logo sur le torse">
+                        </div>
+                        <div class="name">
+                            <p>Cressi Med 2.5mm <br> Homme</p>
+                        </div>
+                        <div class="reference">
+                            <p>Shorty monopièce en néoprène avec doublure double épaisseur de 3 mm</p>
+                        </div>
+                        <div class="price">
+                            <p>54.99€</p>
+                        </div>
+                        <div class="add">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="accessories">
+
+        </div>
+        <div id="electronics">
+
         </div>
     </div>
-    <div id="suit">
-        <div class="listing">
-            <ul>
-                <li>
-                    <div class="img">
-                        <img src="assets/img/suit/mini/seac-ciao-2.5-mm.jpg" alt="body noir avec cote rouge et bande blanche marque seac">
+
+    
+
+    <!-- Fenêtre modale pour le panier d'achat. -->
+    
+    <!-- Bouton panier d'achat -->
+    <div class="container">
+
+        <!-- Ajout d'un bouton ajouter au panier pour test de modale -->
+        <button class="btn btn-primary shop-item-button" type="button">Ajouter au panier</button>
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cartModal">
+            Panier d'achat
+        </button>
+    </div>
+
+    <!-- Fenêtre modale -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        Votre panier d'achat
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-image">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Produit</th>
+                                <th scope="col">Prix</th>
+                                <th scope="col">Quantité</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="w-25">
+                                    <img src="assets/img/suit/mini/cressi-med-x-2.5-mm.jpg"
+                                        class="img-fluid img-thumbnail" alt="Sheep">
+                                </td>
+                                <td>Cressi Med 2.5mm Homme</td>
+                                <td>54.99€</td>
+                                <td class="qty"><input type="text" class="form-control" id="input1" value="1"></td>
+                                <td>1</td>
+                                <td>
+                                    <a href="#" class="btn btn-danger btn-sm">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-content-end">
+                        <h5>Total: <span class="price text-success">54.99€</span></h5>
                     </div>
-                    <div class="name">
-                        <p>SEAC Ciao 2.5mm <br>Homme</p>
-                    </div>                   
-                    <div class="reference">
-                       <p>Combinaison pour Homme Adulte de couleur noir avec une epaisseur de 2mm et fermeture eclair avant</p> 
-                    </div>
-                    <div class="price">
-                        <p>44.99€</p>
-                    </div>
-                    <div class="add">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </li>                
-                <li>
-                    <div class="img">
-                        <img src="assets/img/suit/mini/seac-ciao-2.5-mm-woman.jpg" alt="combinaison shorty noir avec bande bleue et fermeture glissiere avant">
-                    </div>
-                    <div class="name">
-                        <p>SEAC Ciao 2.5mm <br>Femme</p>
-                    </div>                   
-                    <div class="reference">
-                       <p>Combinaison shorty pour Femme Adulte avec une epaisseur de 2mm et une fermeture glissiere anterieure.</p> 
-                    </div>
-                    <div class="price">
-                        <p>44.99€</p>
-                    </div>
-                    <div class="add">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </li>
-                <li>
-                    <div class="img">
-                        <img src="assets/img/suit/mini/seac-relax-2.2-mm-woman.jpg" alt="combinaison monopiece noir avec cote rose avec fermeture glissiere dorsale">
-                    </div>
-                    <div class="name">
-                        <p>SEAC Relax 2.2mm <br>Femme</p>
-                    </div>                    
-                    <div class="reference">
-                       <p>Combinaison monopiece pour Femme Adulte avec fermeture glissiere dorsale. Comporte genouilleres avec renforts en polyurethane</p> 
-                    </div>
-                    <div class="price">
-                        <p>64.99€</p>
-                    </div>
-                    <div class="add">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </li>
-             
-                <li>
-                    <div class="img">
-                        <img src="assets/img/suit/mini/cressi-med-x-2.5-mm.jpg" alt="Shorty monopiece noir avec bande bleue blanche et grise et logo sur le torse">
-                    </div>
-                    <div class="name">
-                        <p>Cressi Med 2.5mm <br> Homme</p>
-                    </div>                   
-                    <div class="reference">
-                       <p>Shorty monopièce en néoprène avec doublure double épaisseur de 3 mm</p> 
-                    </div>
-                    <div class="price">
-                        <p>54.99€</p>
-                    </div>
-                    <div class="add">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </li>
-            </ul>
+                </div>
+                <div class="modal-footer border-top-0 d-flex justify-content-between">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-success">Commander</button>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="accessories">
-
-    </div>
-    <div id="electronics">
-
-    </div>
 </div>
-<section>
-<div class="contener-text">
-    <div class="text" id="text2">
-        <h3>Horaires</h3>
-        <p>Lundi : Fermé / Fermé</p>
-        <p>Mardi :<time datetime="11:30"> 11:30 </time> - <time datetime="15:30"> 15:30 </time> / <time datetime="18:30"> 18:30 </time> - <time datetime="23:30"> 23:30 </time></p>
-        <p>Mercredi :<time datetime="11:30"> 11:30 </time> - <time datetime="15:30"> 15:30 </time> / <time datetime="18:30"> 18:30 </time> - <time datetime="23:30"> 23:30 </time></p>
-        <p>Jeudi :<time datetime="11:30"> 11:30 </time>- <time datetime="15:30"> 15:30 </time> / <time datetime="18:30"> 18:30 </time> - <time datetime="23:30"> 23:30 </time></p>
-        <p>Vendredi :<time datetime="11:30"> 11:30 </time>- <time datetime="15:30"> 15:30 </time> / <time datetime="18:30"> 18:30 </time> - <time datetime="23:30"> 23:30 </time></p>
-        <p>Samedi :<time datetime="11:30"> 11:30 </time>- <time datetime="15:30"> 16:30 </time> / <time datetime="18:30"> 18:30 </time> - <time datetime="01:30"> 01:30 </time></p>
-        <p>Dimanche :<time datetime="11:30"> 11:30 </time>- <time datetime="15:30"> 16:30 </time> / Fermé</p>
-    </div>
-    <p id="adresse">22 Albert 1er Fort mahon (80120)</p>
-    <img id="maps" src="assets/img/localisation.jpg" alt="Image de notre positions">
-</div>
-</div>
-</section>
 
-<footer>
-<p>&copy;Copyright 2020</p>
-</footer>
+    <section>
+        <div class="contener-text">
+            <div class="text" id="text2">
+                <h3>Horaires</h3>
+                <p>Lundi : Fermé / Fermé</p>
+                <p>Mardi :<time datetime="11:30"> 11:30 </time> - <time datetime="15:30"> 15:30 </time> / <time
+                        datetime="18:30"> 18:30 </time> - <time datetime="23:30"> 23:30 </time></p>
+                <p>Mercredi :<time datetime="11:30"> 11:30 </time> - <time datetime="15:30"> 15:30 </time> / <time
+                        datetime="18:30"> 18:30 </time> - <time datetime="23:30"> 23:30 </time></p>
+                <p>Jeudi :<time datetime="11:30"> 11:30 </time>- <time datetime="15:30"> 15:30 </time> / <time
+                        datetime="18:30"> 18:30 </time> - <time datetime="23:30"> 23:30 </time></p>
+                <p>Vendredi :<time datetime="11:30"> 11:30 </time>- <time datetime="15:30"> 15:30 </time> / <time
+                        datetime="18:30"> 18:30 </time> - <time datetime="23:30"> 23:30 </time></p>
+                <p>Samedi :<time datetime="11:30"> 11:30 </time>- <time datetime="15:30"> 16:30 </time> / <time
+                        datetime="18:30"> 18:30 </time> - <time datetime="01:30"> 01:30 </time></p>
+                <p>Dimanche :<time datetime="11:30"> 11:30 </time>- <time datetime="15:30"> 16:30 </time> / Fermé</p>
+            </div>
+            <p id="adresse">22 Albert 1er Fort mahon (80120)</p>
+            <img id="maps" src="asset/img/Maps-google.png" alt="Image de notre positions">
+        </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy;Copyright 2020</p>
+    </footer>
+
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
 
 </body>
+
 </html>
