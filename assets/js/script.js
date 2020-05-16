@@ -32,3 +32,5 @@ function updateCardTotal() {
     document.getElementsByClassName('price')[0].innerText = total + '€';
 }
 /* La fonction update ne fonctionne pas : "script.js:26 Uncaught TypeError: Cannot read property 'innerText' of undefined"*/
+
+
