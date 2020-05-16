@@ -14,7 +14,6 @@ for (let i = 0; i < removeCartItemButtons.length; i++) {
         updateCardTotal();
     })
 }
-/* La fonction remove ne fonctionne pas sur l'icône*/
 
 function updateCardTotal() {
     let cartItemContainer = document.getElementsByClassName('cart-items')[0];
@@ -24,13 +23,9 @@ function updateCardTotal() {
         let cartItem = cartItems[i];
         let priceElement = cartItem.getElementsByClassName('cart-price')[0];
         let quantityElement = cartItem.getElementsByClassName('form-control')[0];
-        /* console.log(priceElement, quantityElement); => undefined */ 
         let price = parseFloat(priceElement.innerText.replace('€', ''));
         let quantity = quantityElement.value;
         total = total + (price * quantity);
     }
     document.getElementsByClassName('price')[0].innerText = total + '€';
 }
-/* La fonction update ne fonctionne pas : "script.js:26 Uncaught TypeError: Cannot read property 'innerText' of undefined"*/
-
-
