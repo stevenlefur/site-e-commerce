@@ -54,17 +54,97 @@
                             </button>
                         </div>
                     </div>
-                    <a class="btn btn-success btn-sm ml-3" href="cart.html">
+                    <button type="button" class="btn btn-success btn-sm ml-3" data-toggle="modal"
+                        data-target="#cartModal">
                         <i class="fa fa-shopping-cart"></i> Panier
                         <span class="badge badge-light">3</span>
-                    </a>
+                    </button>
                 </form>
             </div>
         </div>
     </nav>
 
+
+    <!-- Fenêtre modale pour le panier d'achat. -->
+
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        Votre panier d'achat
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-image">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Produit</th>
+                                <th scope="col">Prix</th>
+                                <th scope="col">Quantité</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <div class="cart-items">
+                                <div class="cart-item">
+                                    <tr>
+                                        <td class="w-25">
+                                            <img src="assets/img/suit/mini/cressi-med-x-2.5-mm.jpg"
+                                                class="img-fluid img-thumbnail" alt="Sheep">
+                                        </td>
+                                        <td>Cressi Med 2.5mm Homme</td>
+                                        <td class='cart-price'>54.99€</td>
+                                        <td class="qty"><input type="text" class="form-control" id="input1" value="1">
+                                        </td>
+                                        <td>1</td>
+                                        <td>
+                                            <a href="#" class="btn btn-danger btn-sm">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </div>
+                                <div class="cart-item">
+                                    <tr>
+                                        <td class="w-25">
+                                            <img src="assets/img/suit/mini/cressi-med-x-2.5-mm.jpg"
+                                                class="img-fluid img-thumbnail" alt="Sheep">
+                                        </td>
+                                        <td>Cressi Med 2.5mm Homme</td>
+                                        <td class='cart-price'>54.99€</td>
+                                        <td class="qty"><input type="text" class="form-control" id="input1" value="1">
+                                        </td>
+                                        <td>1</td>
+                                        <td>
+                                            <a href="#" class="btn btn-danger btn-sm">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </div>
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-content-end">
+                        <h5>Total: <span class="price text-success"></span></h5>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0 d-flex justify-content-between">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-success">Commander</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
     <div id="wrap">
-        
+
         <div id="filternav">
             <div class="pricefilter">
                 <input type="text" name="pricefilter" id="priceF">
@@ -162,98 +242,14 @@
     </div>
 
 
-
-    <!-- Fenêtre modale pour le panier d'achat. -->
-
-    <!-- Bouton panier d'achat -->
+    <!-- Ajout d'un bouton ajouter au panier pour test de modale -->
     <div class="container">
 
-        <!-- Ajout d'un bouton ajouter au panier pour test de modale -->
         <button class="btn btn-primary shop-item-button" type="button">Ajouter au panier</button>
 
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cartModal">
-            Panier d'achat
-        </button>
     </div>
 
-    <!-- Fenêtre modale -->
-    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header border-bottom-0">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        Votre panier d'achat
-                    </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <table class="table table-image">
-                        <thead>
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">Produit</th>
-                                <th scope="col">Prix</th>
-                                <th scope="col">Quantité</th>
-                                <th scope="col">Total</th>
-                                <th scope="col">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <div class="cart-items">
-                                <div class="cart-item">
-                                    <tr>
-                                        <td class="w-25">
-                                            <img src="assets/img/suit/mini/cressi-med-x-2.5-mm.jpg"
-                                                class="img-fluid img-thumbnail" alt="Sheep">
-                                        </td>
-                                        <td>Cressi Med 2.5mm Homme</td>
-                                        <td class='cart-price'>54.99€</td>
-                                        <td class="qty"><input type="text" class="form-control" id="input1" value="1">
-                                        </td>
-                                        <td>1</td>
-                                        <td>
-                                            <a href="#" class="btn btn-danger btn-sm">
-                                                <i class="fa fa-times"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </div>
-                                <div class="cart-item">
-                                    <tr>
-                                        <td class="w-25">
-                                            <img src="assets/img/suit/mini/cressi-med-x-2.5-mm.jpg"
-                                                class="img-fluid img-thumbnail" alt="Sheep">
-                                        </td>
-                                        <td>Cressi Med 2.5mm Homme</td>
-                                        <td class='cart-price'>54.99€</td>
-                                        <td class="qty"><input type="text" class="form-control" id="input1" value="1">
-                                        </td>
-                                        <td>1</td>
-                                        <td>
-                                            <a href="#" class="btn btn-danger btn-sm">
-                                                <i class="fa fa-times"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </div>
-                        </tbody>
-                    </table>
-                    <div class="d-flex justify-content-end">
-                        <h5>Total: <span class="price text-success"></span></h5>
-                    </div>
-                </div>
-                <div class="modal-footer border-top-0 d-flex justify-content-between">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                    <button type="button" class="btn btn-success">Commander</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
+    
     <section>
         <div class="contener-text">
             <div class="text" id="text2">
