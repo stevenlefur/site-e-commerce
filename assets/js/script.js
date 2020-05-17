@@ -58,13 +58,20 @@ function addItemToCart(imgSrc, product, price) {
     let cartItem = document.createElement('tr');
     cartItem.classList.add('cart-item');
     let cartItems = document.getElementsByClassName('cart-items')[0];
+    let cartItemsNames = cartItems.getElementsByClassName('cart-product');
+    for (let i = 0; i < cartItemsNames.length; i++) {
+        if (cartItemsNames[i].innerText== product) {
+            alert('Le produit selectionné a déjà été ajouté au panier.');
+            return
+        }    
+    }
     let cartItemContents = `
         <td class="w-25">
         <img src="${imgSrc}"
         class="img-fluid img-thumbnail" alt="Sheep">
         </td>
-        <td>${product}</td>
-        <td class='cart-price'>${price}</td>
+        <td class="cart-product">${product}</td>
+        <td class="cart-price">${price}</td>
         <td class="qty"><input type="text" class="form-control" id="input1" value="1">
         </td>
         <td>1</td>
