@@ -56,6 +56,7 @@ function addToCartClicked() {
 
 function addItemToCart(imgSrc, product, price) {
     let cartItem = document.createElement('tr');
+    cartItem.classList.add('cart-item');
     let cartItems = document.getElementsByClassName('cart-items')[0];
     let cartItemContents = `
         <td class="w-25">
