@@ -18,6 +18,12 @@ function ready() {
         let button = removeCartItemButtons[i];
         button.addEventListener('click', removeCartItem)
     }
+
+    let quantityInputs = document.getElementsByClassName('form-control');
+    for (let i = 0; i < quantityInputs.length; i++) {
+        let input = quantityInputs[i];
+        input.addEventListener('change', quantityChanged);
+    }
 }
 
 function removeCartItem() {
@@ -25,6 +31,13 @@ function removeCartItem() {
     updateCardTotal();
 }
 
+function quantityChanged(event) {
+    let input = event.target;
+    if(isNaN(input.value) || input.value <= 0 ) {
+         input.value = 1;
+    }
+    updateCardTotal();  
+}
 
 function updateCardTotal() {
     let cartItemContainer = document.getElementsByClassName('cart-items')[0];
@@ -38,5 +51,6 @@ function updateCardTotal() {
         let quantity = quantityElement.value;
         total = total + (price * quantity);
     }
+    total = Math.round(total * 100) / 100;
     document.getElementsByClassName('price')[0].innerText = total + '€';
 }
