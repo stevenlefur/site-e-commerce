@@ -4,16 +4,27 @@
 
 /* Source : https://www.youtube.com/watch?v=YeFzkC2awTM */
 
-let removeCartItemButtons = document.getElementsByClassName('btn-danger');
-console.log(removeCartItemButtons);
-
-for (let i = 0; i < removeCartItemButtons.length; i++) {
-    let button = removeCartItemButtons[i];
-    button.addEventListener('click', function () {
-        this.closest("tr").remove();
-        updateCardTotal();
-    })
+if (document.readyState == 'loading') {
+    document.addEventListener('DOMContentLoaded', ready);
+} else {
+    ready();
 }
+
+function ready() {
+    let removeCartItemButtons = document.getElementsByClassName('btn-danger');
+    console.log(removeCartItemButtons);
+
+    for (let i = 0; i < removeCartItemButtons.length; i++) {
+        let button = removeCartItemButtons[i];
+        button.addEventListener('click', removeCartItem)
+    }
+}
+
+function removeCartItem() {
+    this.closest("tr").remove();
+    updateCardTotal();
+}
+
 
 function updateCardTotal() {
     let cartItemContainer = document.getElementsByClassName('cart-items')[0];
