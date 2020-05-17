@@ -82,7 +82,8 @@ function addItemToCart(imgSrc, product, price) {
         </td>`
         cartItem.innerHTML = cartItemContents;
     cartItems.append(cartItem);
-    cartItem.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
+    cartItem.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem);
+    cartItem.getElementsByClassName('qty')[0].addEventListener('change', quantityChanged);
 }
 
 function updateCardTotal() {
