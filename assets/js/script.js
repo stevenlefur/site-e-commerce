@@ -24,6 +24,12 @@ function ready() {
         let input = quantityInputs[i];
         input.addEventListener('change', quantityChanged);
     }
+
+    let addToCartButtons = document.getElementsByClassName('add');
+    for (let i = 0; i < addToCartButtons.length; i++) {
+        let button = addToCartButtons[i];
+        button.addEventListener('click', addToCartClicked);
+    }
 }
 
 function removeCartItem() {
@@ -33,10 +39,42 @@ function removeCartItem() {
 
 function quantityChanged(event) {
     let input = event.target;
-    if(isNaN(input.value) || input.value <= 0 ) {
-         input.value = 1;
+    if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1;
     }
-    updateCardTotal();  
+    updateCardTotal();
+}
+
+function addToCartClicked(event) {
+    let button = event.target;
+    let shopItem = button.parentElement;
+    let imgSrc = shopItem.getElementsByClassName('img')[0].src;
+    let product = shopItem.getElementsByClassName('name')[0].innerText;
+    let price = shopItem.getElementsByClassName('price')[0].innerText;
+    addItemToCart(imgSrc, product, price);
+    updateCardTotal();
+}
+
+function addItemToCart(imgSrc, product, price) {
+    let cartItem = document.createElement('tr');
+    let cartItems = document.getElementsByClassName('cart-items')[0];
+    let cartItemContents = `
+        <td class="w-25">
+        <img src="${imgSrc}"
+        class="img-fluid img-thumbnail" alt="Sheep">
+        </td>
+        <td>${product}</td>
+        <td class='cart-price'>${price}</td>
+        <td class="qty"><input type="text" class="form-control" id="input1" value="1">
+        </td>
+        <td>1</td>
+        <td>
+            <a href="#" class="btn btn-danger btn-sm">
+                <i class="fa fa-times"></i>
+            </a>
+        </td>`
+        cartItem.innerHTML = cartItemContents;
+    cartItems.append(cartItem);
 }
 
 function updateCardTotal() {
