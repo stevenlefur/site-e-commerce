@@ -45,9 +45,8 @@ function quantityChanged(event) {
     updateCardTotal();
 }
 
-function addToCartClicked(event) {
-    let button = event.target;
-    let shopItem = button.parentElement;
+function addToCartClicked() {
+    let shopItem = this.closest("li");
     let imgSrc = shopItem.getElementsByClassName('picture')[0].src;
     let product = shopItem.getElementsByClassName('name')[0].innerText;
     let price = shopItem.getElementsByClassName('price')[0].innerText;
