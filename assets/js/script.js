@@ -30,6 +30,12 @@ function ready() {
         let button = addToCartButtons[i];
         button.addEventListener('click', addToCartClicked);
     }
+
+    document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked);
+}
+
+function purchaseClicked() {
+    alert('Merci pour votre achat.');
 }
 
 function removeCartItem() {
