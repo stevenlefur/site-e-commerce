@@ -36,6 +36,11 @@ function ready() {
 
 function purchaseClicked() {
     alert('Merci pour votre achat.');
+    let cartItems = document.getElementsByClassName('cart-items')[0];
+    while (cartItems.hasChildNodes()) {
+        cartItems.removeChild(cartItems.firstChild);
+    }
+    updateCardTotal();
 }
 
 function removeCartItem() {

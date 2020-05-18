@@ -1,7 +1,7 @@
 header.page-header {
-    background: no-repeat left/cover url(../img/plongée.jpg);
+    background: no-repeat left/cover url(../img/diving-1798527__340.webp);
     display: flex;
-    height: 150px;
+    height: 300px;
     min-width: 120px;
     align-items: center;
     color: #0079BF;
@@ -12,6 +12,7 @@ header.page-header > h1 {
         fantasy;
     margin: 2%;
 }
+
 html{
     margin: 0;
 }
@@ -121,6 +122,6 @@ footer{
     color: #FFF;
     font-size: 30px;
     background-color: #0079BF;
-    width: 1590px;
+    width: 100 vw;
     height: 169px;
 }
